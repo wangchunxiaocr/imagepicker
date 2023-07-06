@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#393a3f"
+        android:paddingTop="25dp">
+
+        <ImageView
+            android:id="@+id/imgbtnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/picker_ic_arrow_back_easy_photos" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:text="@string/crop_image_menu_crop"
+            android:textColor="#ffffff"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivRotate"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_title"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/crop_image_menu_rotate_right" />
+    </RelativeLayout>
+
+    <com.linchaolong.android.imagepicker.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
